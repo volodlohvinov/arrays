@@ -17,7 +17,9 @@ let productOfPositive = 1;
 for (let i = 0; i < numbers.length; i++) {
   const currentNumber = numbers[i];
 
-  sum += currentNumber;
+  if (numbers[i] > 0) {
+    sum += numbers[i];}
+  
 
   if (currentNumber > 0) {
     positiveCount++;
@@ -44,7 +46,7 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 const message = `
- Sum of elements: ${sum}
+ Sum of positive elements: ${sum}
  Number of positive elements: ${positiveCount}
  Maximum element: ${maxElement}
  Index of the maximum element: ${maxElementIndex}
